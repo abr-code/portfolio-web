@@ -1,0 +1,27 @@
+---
+import ButtonLink from "../components/ButtonLink.astro";
+import Section from "../components/Section.astro";
+import Github from "../components/icons/Github.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Portafolio">
+  <main>
+    <Section>
+      <h2 class="mt-40 text-pretty">
+        <span class="text-7xl">Hola soy Abraham</span> , <span
+          class="text-3xl text-blue-300"
+          >desarrollador web e ingeniero en sistemas.</span
+        >
+      </h2>
+      <div class="flex gap-2 mt-5 flex-wrap">
+        <ButtonLink href="https://github.com/abr-code">
+          <Github class="size-4 md:size-6" />
+          Github
+        </ButtonLink>
+      </div>
+    </Section>
+  </main>
+</Layout>
+
+<style></style>
