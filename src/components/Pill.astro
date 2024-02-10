@@ -1,0 +1,9 @@
+---
+const { classp } = Astro.props;
+---
+
+<div
+  class=`w-fit flex justify-center gap-2 rounded-full border-gray-400 border-2 p-2 font-semibold text-sm text-gray-500 dark:text-white  ${classp}`
+>
+  <slot />
+</div>

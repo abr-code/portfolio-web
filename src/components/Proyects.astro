@@ -1,0 +1,80 @@
+---
+import ButtonLink from '../components/ButtonLink.astro';
+import Pill from '../components/Pill.astro';
+import Code from '../components/icons/Code.astro';
+import NextJS from '../components/icons/Next.astro';
+import Tailwind from '../components/icons/Tailwind.astro';
+import Github from './icons/Github.astro';
+import Website from './icons/Website.astro';
+
+
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  }
+}
+const PROYECTS=[
+  {
+    name:"Juego de Memoria",
+    description:"Es un juego de encontrar el par con tema deportivo",
+    image:"https://github.com/abr-code/memory-game/raw/main/screenchots/game.png",
+    projectLink:"https://github.com/abr-code/memory-game",
+    page: "",
+    tags:[
+      TAGS.NEXT, TAGS.TAILWIND
+    ]
+  },
+  {
+    name:"Trivia",
+    description:"Trivia basada en preguntas de opcion multiple acerca de ciencia, geografia, historia, juegos y mitologia",
+    image:"https://github.com/abr-code/Trivia-game/raw/main/screenshots/pc-categorias.png",
+    projectLink:"https://github.com/abr-code/Trivia-game",
+    tags:[
+      TAGS.NEXT, TAGS.TAILWIND
+    ]
+  },
+
+];
+
+---
+
+<h2 id="projects" class="text-3xl font-bold pb-5 flex items-center"> <span><Code /></span> Proyectos</h2>
+{
+ PROYECTS.map(({name,description,image,tags, projectLink})=>{
+return <article class="mb-4" >
+
+<h3 class="text-2xl font-bold pb-2 text-blue-400">{name}</h3>
+<div class="flex gap-2 py-2">
+{
+  tags.map((tag)=>{
+    return <Pill classp={tag.class}> <tag.icon class="size-2 md:size-4"/> { tag.name } </Pill>
+  })
+}
+</div>
+<p  class="pb-2 text-lg">{description}</p>
+<img class="mb-4 rounded-xl"  src={image} alt=`Imagen de proyecto ${name}`>
+<div class="flex gap-2">
+
+<ButtonLink  href={projectLink} >
+ <Github class="size-4 md:size-6" />
+  Github
+</ButtonLink>
+<ButtonLink  >
+ <Website class="size-4 md:size-6" />
+ Ir al sitio
+</ButtonLink>
+
+</div>
+
+</article>
+})
+
+}
