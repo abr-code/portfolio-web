@@ -1,0 +1,36 @@
+<h2 class="text-3xl font-bold pb-5">Contactame</h2>
+
+<form
+  action="mailto:abraham.dev.contact@gmail.com"
+  method="post"
+  enctype="text/plain"
+  class="flex flex-col text-pretty text-lg font-semibold dark:text-white items-start justify-around"
+>
+  Asunto:<br />
+  <input
+    type="text"
+    name="subject"
+    placeholder="Tu Asunto"
+    class="p-1 bg-gray-200 rounded-lg w-1/2"
+  />
+  <br />
+  Email:<br />
+  <input
+    type="email"
+    name="email"
+    placeholder="Tu Email"
+    class="p-1 bg-gray-200 rounded-lg w-1/2"
+  /><br />
+  Mensaje:<br />
+  <textarea
+    name="body"
+    rows="5"
+    cols="30"
+    placeholder="Tu Mensaje"
+    class="p-1 bg-gray-200 rounded-lg w-2/3"></textarea><br />
+  <input
+    type="submit"
+    value="Enviar"
+    class="p-1 bg-blue-200 rounded-lg w-1/3 dark:text-white dark:bg-gray-700"
+  />
+</form>
