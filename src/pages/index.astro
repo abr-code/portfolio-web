@@ -1,6 +1,7 @@
 ---
 import About from "../components/About.astro";
 import ButtonLink from "../components/ButtonLink.astro";
+import Contact from "../components/Contact.astro";
 import FooterSection from "../components/FooterSection.astro";
 import Proyects from "../components/Proyects.astro";
 import Section from "../components/Section.astro";
@@ -12,9 +13,9 @@ import Layout from "../layouts/Layout.astro";
   <main>
     <Section>
       <h2 class="mt-40 text-pretty">
-        <span class="text-7xl">Hola soy Abraham</span> , <span
-          class="text-3xl text-blue-400"
-          >desarrollador web e ingeniero en sistemas.</span
+        <span class="text-7xl">Hola, soy Abraham</span>
+        <span class="text-3xl text-blue-400">
+          desarrollador web e ingeniero en sistemas.</span
         >
       </h2>
       <div class="flex gap-2 mt-5 flex-wrap">
@@ -29,6 +30,9 @@ import Layout from "../layouts/Layout.astro";
     </Section>
     <Section>
       <Proyects />
+    </Section>
+    <Section>
+      <Contact />
     </Section>
   </main>
   <FooterSection />
