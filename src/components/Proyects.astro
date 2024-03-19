@@ -8,6 +8,7 @@ import Github from './icons/Github.astro';
 import Website from './icons/Website.astro';
 import Html from './icons/Html.astro';
 import JavaScript from './icons/JavaScript.astro';
+import React from './icons/React.astro';
 
 
 
@@ -31,9 +32,25 @@ const TAGS = {
     name: "HTML",
     class: "bg-[#cc4722] text-white",
     icon: Html,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#004355] text-black",
+    icon: React,
+
   }
 }
 const PROYECTS=[
+  {
+    name:"Kanban board React",
+    description:"Un tablero kanban para las tareas pendientes, en proceso, y terminadas.",
+    image:"https://raw.githubusercontent.com/abr-code/kanban-board-react/main/src/assets/kanban%20board%20image.png",
+    projectLink:"https://github.com/abr-code/kanban-board-react",
+    page: "https://abr-code.github.io/kanban-board-react/",
+    tags:[
+      TAGS.REACT, TAGS.JAVASCRIPT, TAGS.HTML
+    ] 
+  },
   {
     name:"Juego de Memoria",
     description:"Es un juego de encontrar el par con tema deportivo",
