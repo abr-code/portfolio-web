@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://abr-code.github.io',
-  base: '/simple-portfolio',
+  base: '/portfolio-web',
 });
