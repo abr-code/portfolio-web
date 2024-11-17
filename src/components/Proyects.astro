@@ -9,7 +9,7 @@ import Website from './icons/Website.astro';
 import Html from './icons/Html.astro';
 import JavaScript from './icons/JavaScript.astro';
 import React from './icons/React.astro';
-
+import AstroJS from './icons/AstroJS.astro';
 
 
 const TAGS = {
@@ -38,9 +38,34 @@ const TAGS = {
     class: "bg-[#004355] text-black",
     icon: React,
 
+    },
+  ASTRO:{
+  name: "Astro",
+  class: "bg-[#1c1a1a] text-black",
+  icon: AstroJS,
   }
 }
 const PROYECTS=[
+  {
+    name:"Juego de Memoria",
+    description:"Es un juego de encontrar el par con tema deportivo",
+    image:"https://github.com/abr-code/memory-game/raw/main/screenchots/game.png",
+    projectLink:"https://github.com/abr-code/memory-game",
+    page: "https://abr-code.github.io/memory-game/",
+    tags:[
+      TAGS.JAVASCRIPT, TAGS.HTML
+    ]
+  },
+{
+    name:"Cake Shop",
+    description:"Página ficticia de una dulcería",
+    image:"https://private-user-images.githubusercontent.com/118399227/386884931-2d43b86a-b8d5-40ac-9815-eb41f5723e69.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzE4MDI3NTgsIm5iZiI6MTczMTgwMjQ1OCwicGF0aCI6Ii8xMTgzOTkyMjcvMzg2ODg0OTMxLTJkNDNiODZhLWI4ZDUtNDBhYy05ODE1LWViNDFmNTcyM2U2OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTE3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTExN1QwMDE0MThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jZmMxYTg2ZjY1MDU1MmFkNDBiMmVjNzljMWRlZDU5ZDM0YmIyYTJmNWYzZTc2NjQzNDg0YTVmMmYyMTdmODhkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.xq0d0NRXN_xlAKh3CDFemcrvzl_s02jCn3fgD8qFOJ8",
+    projectLink:"https://github.com/abr-code/Cake-shop",
+    page: "https://abr-code.github.io/Cake-shop/",
+    tags:[
+    TAGS.ASTRO, TAGS.JAVASCRIPT 
+    ]
+  },
   {
     name:"Kanban board React",
     description:"Un tablero kanban para las tareas pendientes, en proceso, y terminadas.",
@@ -52,16 +77,6 @@ const PROYECTS=[
     ] 
   },
   {
-    name:"Juego de Memoria",
-    description:"Es un juego de encontrar el par con tema deportivo",
-    image:"https://github.com/abr-code/memory-game/raw/main/screenchots/game.png",
-    projectLink:"https://github.com/abr-code/memory-game",
-    page: "https://abr-code.github.io/memory-game/",
-    tags:[
-      TAGS.JAVASCRIPT, TAGS.HTML
-    ]
-  },
-  {
     name:"Trivia",
     description:"Trivia basada en preguntas de opción múltiple acerca de ciencia, geografía, historia, juegos y mitología",
     image:"https://github.com/abr-code/Trivia-game/raw/main/screenshots/pc-categorias.png",
@@ -71,7 +86,6 @@ const PROYECTS=[
       TAGS.JAVASCRIPT, TAGS.HTML
     ]
   },
-
 ];
 
 ---
@@ -85,7 +99,7 @@ return <article class="mb-4 " >
 <div class="flex gap-2 py-2">
 {
   tags.map((tag)=>{
-    return <Pill classp=`${tag.class} flex justify-center align-middle`> <tag.icon class="size-4 md:size-5"/> { tag.name } </Pill>
+    return <Pill classp=`${tag.class} flex justify-center align-middle`> <tag.icon class="size-4 md:size-5"/><span class="h-full">{ tag.name }</span>  </Pill>
   })
 }
 </div>
